@@ -34,7 +34,7 @@
 	<fieldset><legend><b>Cart</b></legend>
 		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method='get'><table><tr><th>Product Name</th><th>Quantity</th><th>Price</th></tr>
 		<?php 
-			$conn=mysqli_connect("localhost","root","","wholesale");
+			$conn=mysqli_connect("localhost", "root", "wholesale");
 			$curUser=$_SESSION['loginUser'];
 			$sql="select * from cart where customer_id='$curUser'";
 			$result=mysqli_query($conn,$sql);
